@@ -8,7 +8,83 @@
   </head>
 
   <body>
-    Hello world
+    <header>
+      <div class="header-left">
+        <h2>Bookstore</h2>
+      </div>
+      <div class="header-right">
+        <img src="./assets/user.png" height="40" alt="" />
+        <h4>John Doe</h4>
+      </div>
+    </header>
+    <main>
+      <div class="action">
+        <input type="text" placeholder="Search books" />
+        <button id="btnAdd">Add book</button>
+      </div>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Topic</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Refactoring</td>
+            <td>Martin Fowler</td>
+            <td>Programming</td>
+            <td class="del"></td>
+          </tr>
+          <tr>
+            <td>Refactoring</td>
+            <td>Martin Fowler</td>
+            <td>Programming</td>
+            <td class="del"></td>
+          </tr>
+          <tr>
+            <td>Refactoring</td>
+            <td>Martin Fowler</td>
+            <td>Programming</td>
+            <td class="del"></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <!-- The Modal -->
+    <div id="deleteModal" class="delete-modal">
+      <!-- Modal content -->
+      <div class="delete-modal-content">
+        <span class="close">&times;</span>
+        <h3>Delete Book</h3>
+        <p>Do you want to delete <strong>Refactoring</strong> book</p>
+        <div class="delete-option">
+          <button>Delete</button>
+          <button>Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div id="addModal" class="add-modal">
+      <!-- Modal content -->
+      <div class="add-modal-content">
+        <span class="close">&times;</span>
+        <h3>Add Book</h3>
+        <label for="name"><b>Name</b></label>
+        <input type="text" name="name" required />
+        <label for="author"><b>Author</b></label>
+        <input type="text" name="author" required />
+        <label for="topic"><b>Topic</b></label>
+        <select name="topic" id="">
+          <option value="0">Select option</option>
+          <option value="1">Programming</option>
+          <option value="2">Database</option>
+          <option value="3">DevOps</option>
+        </select>
+        <div class="add-option">
+          <button>Create</button>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
