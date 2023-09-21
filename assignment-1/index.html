@@ -19,36 +19,22 @@
     </header>
     <main>
       <div class="action">
-        <input type="text" placeholder="Search books" />
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Search books"
+        />
         <button id="btnAdd">Add book</button>
       </div>
-      <table>
+      <table id="table">
         <thead>
           <th>Name</th>
           <th>Author</th>
           <th>Topic</th>
           <th>Action</th>
         </thead>
-        <tbody>
-          <tr>
-            <td>Refactoring</td>
-            <td>Martin Fowler</td>
-            <td>Programming</td>
-            <td class="del"></td>
-          </tr>
-          <tr>
-            <td>Refactoring</td>
-            <td>Martin Fowler</td>
-            <td>Programming</td>
-            <td class="del"></td>
-          </tr>
-          <tr>
-            <td>Refactoring</td>
-            <td>Martin Fowler</td>
-            <td>Programming</td>
-            <td class="del"></td>
-          </tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </main>
     <!-- The Modal -->
@@ -57,7 +43,7 @@
       <div class="delete-modal-content">
         <span class="close">&times;</span>
         <h3>Delete Book</h3>
-        <p>Do you want to delete <strong>Refactoring</strong> book</p>
+        <p></p>
         <div class="delete-option">
           <button>Delete</button>
           <button>Cancel</button>
@@ -70,18 +56,18 @@
         <span class="close">&times;</span>
         <h3>Add Book</h3>
         <label for="name"><b>Name</b></label>
-        <input type="text" name="name" required />
+        <input type="text" id="name" name="name" required />
         <label for="author"><b>Author</b></label>
-        <input type="text" name="author" required />
+        <input type="text" id="author" name="author" required />
         <label for="topic"><b>Topic</b></label>
-        <select name="topic" id="">
+        <select name="topic" id="topic">
           <option value="0">Select option</option>
-          <option value="1">Programming</option>
-          <option value="2">Database</option>
-          <option value="3">DevOps</option>
+          <option value="Programming">Programming</option>
+          <option value="Database">Database</option>
+          <option value="DevOps">DevOps</option>
         </select>
         <div class="add-option">
-          <button>Create</button>
+          <button id="btnCreate">Create</button>
         </div>
       </div>
     </div>
